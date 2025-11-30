@@ -97,7 +97,7 @@ int main(){
 		cin>>e;
         if(e<=0||e>=900){
             ii=false;
-            cout<<"\n\033[31m超出范围，请重新输入（1-899）"<<endl;
+            cout<<"\n\033[31m超出范围，请重新输入（1-899）"<<endl<<"\033[37m";
         }else{
             ii=true;
         }
