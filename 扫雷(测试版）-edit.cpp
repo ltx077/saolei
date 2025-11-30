@@ -93,11 +93,11 @@ int main(){
 	Sleep(2000);
 	cout<<"您可以指定地雷数量(<900)\033[37m"<<endl;
     bool ii=false;
-	cin>>e;
     while(ii==false){
+		cin>>e;
         if(e<=0||e>=900){
             ii=false;
-            cout<<"超出范围，请重新输入"<<endl;
+            cout<<"\n\033[31m超出范围，请重新输入（1-899）"<<endl<<"\033[37m";
         }else{
             ii=true;
         }
