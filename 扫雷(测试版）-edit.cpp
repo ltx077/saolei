@@ -9,7 +9,7 @@ struct area{
 area p[32][32],a;//不是说改成"map"吗？
 int e,sum;
 string l;
-void f1(){
+void f1(){//打印地图
 	cout<<"\n\033[37m";
 	cout<<"\t                  1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3"<<endl;
 	cout<<"\t1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0\n"<<endl;
@@ -21,7 +21,7 @@ void f1(){
 		cout<<endl;
 	}
 }
-void f2(){
+void f2(){//打印包含雷地图
 	cout<<"\n\033[37m";
 	cout<<"\t                  1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3"<<endl;
 	cout<<"\t1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0\n"<<endl;
@@ -116,8 +116,8 @@ int main(){
 			p[i][j].b=0;
 			p[i][j].t1=0;
 			p[i][j].s="X";
-			p[i][j].u[1]=i;
-			p[i][j].u[2]=j;
+			p[i][j].u[0]=i;
+			p[i][j].u[1]=j;
 		}
 	}
 	srand(time(0));
@@ -130,7 +130,7 @@ int main(){
 			e-=1;
 		} 
 	}
-	f1();
+	//f1();
 	Sleep(2000);
 	cout<<"\n\033[31m地雷示意图(作弊可用)"<<endl;
 	Sleep(2000);
